@@ -1,0 +1,29 @@
+name: CI - Code Quality
+
+on:
+  pull_request:
+    branches: [ "main", "dev" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run linters
+        run: |
+          npm run lint:css
+          npm run lint:html
+
+      - name: Build Tailwind
+        run: npm run build
