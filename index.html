@@ -4,14 +4,196 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template HTML + Tailwind</title>
+    <title>Goma Dating</title>
     <link rel="stylesheet" href="./dist/output.css" />
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <div class="h-screen flex items-center justify-center">
-        <h1 class="text-4xl font-bold">Projet Base : HTML + Tailwind</h1>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow p-4 flex justify-between items-center"> <!-- bg-white shadow p-4 -> fond blanc, ombre et padding. flex justify-between items-center -> logo à gauche, menu à droite, alignement vertical centré.-->
+        <div class="logo">
+            <h1 class="text-2xl font-bold text-pink-600">Goma Dating</h1> <!--text-2xl font-bold text-pink-600 -> taille et couleur du logo.-->
+        </div>
+        <nav>
+            <ul class="flex gap-6 text-gray-700"> <!--menu horizontal avec espace entre les items.-->
+                <li><a href="#" class="hover:text-pink-600">Home</a></li> <!-- hover:text-pink-600 -> changement de couleur au survol.-->
+                <li><a href="#" class="hover:text-pink-600">Search</a></li>
+                <li><a href="#" class="hover:text-pink-600">Join</a></li>
+                <li><a href="#" class="hover:text-pink-600">Blog</a></li>
+                <li><a href="#" class="hover:text-pink-600">News</a></li>
+                <li><a href="#" class="hover:text-pink-600">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero / Slider qui fait changer les images automatiquement, Notez que les images viennent de Tailwind -->
+<section class="relative w-full h-[80vh] overflow-hidden"> <!--le slider fait 80% de la hauteur de l’écran.-->
+    <div id="slider" class="w-full h-full relative"> <!-- permet de superposer le texte sur les images.-->
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"> <!--Object-cover -> image recouvre complètement la zone sans distorsion.-->
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" class="absolute inset-0 w-full object-cover opacity-0 transition-opacity duration-1000"> <!--opacity-100 / opacity-0 transition-opacity → effet de fondu pour les images.-->
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" class="absolute inset-0 w-full object-cover opacity-0 transition-opacity duration-1000">
     </div>
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+        <h2 class="text-4xl md:text-5xl font-bold drop-shadow-lg mb-4">Find Love Easily 💘</h2>
+        <p class="text-lg md:text-xl max-w-2xl mb-6 drop-shadow">Join thousands of singles looking for a real connection.</p>
+        <button class="bg-pink-600 px-6 py-3 rounded-full text-lg hover:bg-pink-700 transition">Get Started Now</button>
+    </div>
+</section>
+<!--il fallait qu'on ajoute du javascript pour que nos images scroll -->
+<script>
+    const slides = document.querySelectorAll('#slider img');
+    let current = 0;
+
+    function nextSlide() {
+        slides[current].classList.remove('opacity-100');
+        slides[current].classList.add('opacity-0');
+        current = (current + 1) % slides.length; //current = (current + 1) % slides.length → revient au début quand on atteint la dernière image.
+        slides[current].classList.remove('opacity-0');
+        slides[current].classList.add('opacity-100');
+    }
+
+    setInterval(nextSlide, 4000); // Change every 4 seconds
+</script>
+
+    <!--<div class="h-screen flex items-center justify-center">
+        <h1 class="text-4xl font-bold">Projet Base : HTML + Tailwind</h1>
+    </div-->
+
+        <!-- Welcome Section -->
+<section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-3xl font-bold mb-4">Welcome to Our Site!</h2>
+        <p class="text-gray-700 mb-4">
+            Welcome to Goma Dating! We connect people from all over the world. Whether you are looking for friendship, romance, or meaningful relationships, our platform is designed to make connections easy and fun.
+        </p>
+        <p class="text-gray-700">
+            Our site offers a safe and engaging environment where singles can meet like-minded individuals. Sign up, create your profile, and start exploring today! </p>
+    </div>
+</section>
+
+
+    <!--Join free * featured profiles form-->
+    <section class="max-w-7x1 mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+        <!--
+        max-w-7xl mx-auto px-4 -> contenu centré avec largeur maximale et padding. grid md:grid-cols-3 gap-8 -> mise en page en 3 colonnes sur écran moyen et plus, avec espace entre.
+        -->
+        <!--Form-->
+        <div class="md:col-span-1 bg-white p-6 rounded-lg shadow"> <!--bg-white p-6 rounded-lg shadow -> carte blache, coins arrondis,ombre-->
+            <h3 class="text-2x1 font-bold mb-4">Join Us - It's Free!</h3>
+                <form class="space-y-4"> <!--espace vertical entre chaque champ. Champs et boutons stylés avec Tailwind pour bordure, padding et hover.-->
+                    <div>
+                        <label class="block text-gray-700">I am a:</label>
+                        <select class="w-full border rounded p-2">
+                            <option>Man</option>
+                            <option>Woman</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Seeking a:</label>
+                        <select class="w-full border rounded p-2">
+                            <option>Man</option>
+                            <option>Woman</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Date of Birth:</label>
+                            <input type="date" class="w-full border rounded p-2">
+
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Email:</label>
+                        <input type="email" class="w-full border rounded p-2" placeholder="info@gomadating.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Password:</label>
+                        <input type="password" class="w-full border rounded p-2" placeholder="Password">
+                    </div>
+                    <button type="submit" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Join Free</button>
+                </form>
+        </div>
+
+        <!-- Featured Profiles -->
+    <div class="md:col-span-2 grid grid-cols-2 gap-4"> <!--2 profils par ligne-->
+        <div class="bg-white p-4 rounded-lg shadow"> <!--carte pour chaque profil-->
+            <img src="https://randomuser.me/api/portraits/women/1.jpg" class="w-full h-48 object-cover rounded" alt="Emma">
+            <div class="mt-2"> <!--Object-cover h-48 -> image recouvrant toute la zone, hauteur fixe.-->
+                <p class="font-bold">Emma, 23</p>
+                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" class="w-full h-48 object-cover rounded" alt="Emily">
+            <div class="mt-2">
+                <p class="font-bold">Emily, 22</p>
+                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" class="w-full h-48 object-cover rounded" alt="John">
+            <div class="mt-2">
+                <p class="font-bold">John, 25</p>
+                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+            <img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-full h-48 object-cover rounded" alt="Kevin">
+            <div class="mt-2">
+                <p class="font-bold">Kevin, 22</p>
+                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-gray-800 text-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
+
+        <div>
+            <h4 class="font-bold mb-4">About Us</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">Agency Info</a></li>
+                <li><a href="#" class="hover:text-white">Services</a></li>
+                <li><a href="#" class="hover:text-white">Dating</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-bold mb-4">Advice</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">FAQs</a></li>
+                <li><a href="#" class="hover:text-white">Account</a></li>
+                <li><a href="#" class="hover:text-white">Contacts</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-bold mb-4">Join In</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">Sign Up</a></li>
+                <li><a href="#" class="hover:text-white">Forums</a></li>
+                <li><a href="#" class="hover:text-white">Promotions</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-bold mb-4">Follow Us</h4>
+            <div class="flex gap-4 mt-2">
+                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">F</a>
+                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">T</a>
+                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">I</a>
+                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">Y</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-gray-400">
+        <p>© 2025 Goma Dating. All Rights Reserved.</p>
+    </div>
+</footer>
+
 </body>
 
 </html>
