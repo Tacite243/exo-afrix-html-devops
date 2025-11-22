@@ -4,195 +4,311 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Goma Dating</title>
-    <link rel="stylesheet" href="./dist/output.css" />
+    <title>Dating - Tailwind CSS Version</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/src//images/favicon.ico" type="image/x-icon" />
 </head>
 
-<body class="bg-gray-100 text-gray-900 font-sans">
+<body class="bg-brand-blue font-sans text-brand-gray">
+    <div class="bg-white mt-2 bg-[url('/src/images/flower_01.jpg')] bg-no-repeat bg-top"
+        style="background-position: center 128px;">
 
-    <!-- Header -->
-    <header class="bg-white shadow p-4 flex justify-between items-center"> <!-- bg-white shadow p-4 -> fond blanc, ombre et padding. flex justify-between items-center -> logo à gauche, menu à droite, alignement vertical centré.-->
-        <div class="logo">
-            <h1 class="text-2xl font-bold text-pink-600">Goma Dating</h1> <!--text-2xl font-bold text-pink-600 -> taille et couleur du logo.-->
+        <!-- Conteneur principal centré -->
+        <div class="max-w-[960px] mx-auto px-5">
+
+            <!-- ============================== HEADER ============================== -->
+            <header class="flex justify-between items-center pt-11 pb-4">
+                <!-- Logo -->
+                <div>
+                    <h1><a href="index.html"><img src="/src/images/logo.png" alt="Dating Logo"></a></h1>
+                </div>
+
+                <!-- Menu de navigation -->
+                <nav>
+                    <ul class="flex text-white rounded-lg bg-brand-blue">
+                        <li class="group relative">
+                            <a href="index.html"
+                                class="block text-center text-base px-6 py-3 bg-brand-blue-dark rounded-l-lg">Home</a>
+                            <!-- Sous-menu (caché par défaut, visible au survol du parent 'group') -->
+                            <ul class="absolute hidden group-hover:block bg-brand-blue-dark w-40 p-5 z-10 text-center">
+                                <li><a href="#" class="block py-1 text-sm hover:text-brand-blue">Man</a></li>
+                                <li class="group/sub relative"><a href="#"
+                                        class="block py-1 text-sm hover:text-brand-blue">Woman</a>
+                                    <!-- Sous-sous-menu -->
+                                    <ul
+                                        class="absolute hidden group-hover/sub:block bg-brand-blue w-40 p-5 z-20 top-0 left-full">
+                                        <li><a href="#" class="block py-1 text-sm hover:text-brand-blue-dark">Gifts</a>
+                                        </li>
+                                        <li><a href="#"
+                                                class="block py-1 text-sm hover:text-brand-blue-dark">Messages</a></li>
+                                        <li><a href="#" class="block py-1 text-sm hover:text-brand-blue-dark">About</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="block py-1 text-sm hover:text-brand-blue">Friend</a></li>
+                            </ul>
+                        </li>
+                        <li class="border-l border-blue-400"><a href="index-1.html"
+                                class="block text-center text-base px-6 py-3 hover:bg-brand-blue-dark transition-colors">Search</a>
+                        </li>
+                        <li class="border-l border-blue-400"><a href="index-2.html"
+                                class="block text-center text-base px-6 py-3 hover:bg-brand-blue-dark transition-colors">Join</a>
+                        </li>
+                        <li class="border-l border-blue-400"><a href="index-3.html"
+                                class="block text-center text-base px-6 py-3 hover:bg-brand-blue-dark transition-colors">Blog</a>
+                        </li>
+                        <li class="border-l border-blue-400"><a href="index-4.html"
+                                class="block text-center text-base px-6 py-3 hover:bg-brand-blue-dark transition-colors">News</a>
+                        </li>
+                        <li class="border-l border-blue-400"><a href="index-5.html"
+                                class="block text-center text-base px-6 py-3 hover:bg-brand-blue-dark transition-colors rounded-r-lg">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- ============================== CONTENT ============================== -->
+            <section id="content" class="pt-4 pb-20">
+
+                <!-- Section supérieure : Slider + Formulaire -->
+                <div class="flex gap-10">
+                    <!-- Colonne gauche: Slider -->
+                    <div class="w-2/3">
+                        <div class="bg-[url('/src/images/slider_shape.png')] bg-no-repeat p-2 h-[451px]">
+                            <!-- Le slider nécessite du JS. Ceci est une représentation statique. -->
+                            <img src="/src/images/slider_01.jpg" alt="Couple smiling"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Colonne droite: Formulaire d'inscription -->
+                    <div class="w-1/3 mt-12">
+                        <p class="text-4xl font-bold text-brand-gray-dark">Join us, <span
+                                class="text-brand-blue-light">it's free!</span></p>
+                        <form id="form-2" class="mt-4 text-sm text-gray-700">
+                            <div class="space-y-2">
+                                <div>
+                                    <label for="i_am" class="block mb-1">I am a:</label>
+                                    <select id="i_am" class="w-full p-2 border border-gray-200 bg-white">
+                                        <option>Man</option>
+                                        <option>Woman</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="seeking" class="block mb-1">Seeking a:</label>
+                                    <select id="seeking" class="w-full p-2 border border-gray-200 bg-white">
+                                        <option>Woman</option>
+                                        <option>Man</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block mb-1">Date of Birth</label>
+                                    <div class="flex gap-1">
+                                        <select class="w-1/3 p-2 border border-gray-200 bg-white">
+                                            <option>Day</option>
+                                        </select>
+                                        <select class="w-1/3 p-2 border border-gray-200 bg-white">
+                                            <option>Month</option>
+                                        </select>
+                                        <select class="w-1/3 p-2 border border-gray-200 bg-white">
+                                            <option>Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-1">E-mail:</label>
+                                    <input type="email" id="email" class="w-full p-2 border border-gray-200">
+                                </div>
+                                <div>
+                                    <label for="password" class="block mb-1">Password:</label>
+                                    <input type="password" id="password" class="w-full p-2 border border-gray-200">
+                                </div>
+                            </div>
+                            <div class="text-right mt-5">
+                                <a href="#"
+                                    class="inline-block bg-brand-blue hover:bg-brand-blue-dark text-white text-xs py-2 px-6 rounded-full transition-colors">Join
+                                    Free</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Section inférieure : Contenu principal -->
+                <div class="flex gap-5 mt-20">
+                    <!-- Colonne gauche : Welcome -->
+                    <div class="w-1/3">
+                        <h2 class="text-2xl font-bold text-gray-700">Welcome to Our Site!</h2>
+                        <p class="mt-5"><span class="text-brand-blue-light">Lorem ipsum dolor sit amet, consecteadipsing
+                                elit. Etiam sed hendrerit dolor. Fusce vitae leo lacus, sed blandit leo. Nulla ac
+                                facilisis est.</span></p>
+                        <p class="mt-5">Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio,
+                            porttitor adipscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam
+                            consectetur dictum turpis quis dignissimsi.</p>
+                        <div class="text-right mt-8">
+                            <a href="#"
+                                class="inline-block bg-brand-blue hover:bg-brand-blue-dark text-white text-xs py-2 px-5 rounded-full transition-colors">Read
+                                More</a>
+                        </div>
+                    </div>
+
+                    <!-- Colonne droite : Carrousels -->
+                    <div class="w-2/3">
+                        <h3 class="text-xl text-gray-700">Females Online (2,432)</h3>
+                        <!-- Le carrousel nécessite du JS. C'est une grille statique qui peut déborder horizontalement -->
+                        <div class="overflow-x-auto">
+                            <div class="flex space-x-4 mt-5">
+                                <!-- Répéter cet élément pour chaque profil -->
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_01.jpg" alt="Emma"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Emma, 23
+                                    </div>
+                                </div>
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_02.jpg" alt="Emily"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Emily, 22
+                                    </div>
+                                </div>
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_03.jpg" alt="Sarah"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Sarah, 23
+                                    </div>
+                                </div>
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_04.jpg" alt="Taylor"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Taylor, 25
+                                    </div>
+                                </div>
+                                <!-- Fin de l'élément répétable -->
+                            </div>
+                        </div>
+
+                        <hr class="my-6 border-gray-200">
+
+                        <h3 class="text-xl text-gray-700">Males Online (1,789)</h3>
+                        <div class="overflow-x-auto">
+                            <div class="flex space-x-4 mt-5">
+                                <!-- Répéter cet élément pour chaque profil -->
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_05.jpg" alt="Den"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Den, 23
+                                    </div>
+                                </div>
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_06.jpg" alt="John"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        John, 20
+                                    </div>
+                                </div>
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_07.jpg" alt="Jose"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Jose, 25
+                                    </div>
+                                </div>
+                                <div
+                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
+                                    <img src="/src/images/page1_img_08.jpg" alt="Kevin"
+                                        class="w-full h-full object-cover">
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Kevin, 22
+                                    </div>
+                                </div>
+                                <!-- Fin de l'élément répétable -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <nav>
-            <ul class="flex gap-6 text-gray-700"> <!--menu horizontal avec espace entre les items.-->
-                <li><a href="#" class="hover:text-pink-600">Home</a></li> <!-- hover:text-pink-600 -> changement de couleur au survol.-->
-                <li><a href="#" class="hover:text-pink-600">Search</a></li>
-                <li><a href="#" class="hover:text-pink-600">Join</a></li>
-                <li><a href="#" class="hover:text-pink-600">Blog</a></li>
-                <li><a href="#" class="hover:text-pink-600">News</a></li>
-                <li><a href="#" class="hover:text-pink-600">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero / Slider qui fait changer les images automatiquement, Notez que les images viennent de Tailwind -->
-<section class="relative w-full h-[80vh] overflow-hidden"> <!--le slider fait 80% de la hauteur de l’écran.-->
-    <div id="slider" class="w-full h-full relative"> <!-- permet de superposer le texte sur les images.-->
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"> <!--Object-cover -> image recouvre complètement la zone sans distorsion.-->
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" class="absolute inset-0 w-full object-cover opacity-0 transition-opacity duration-1000"> <!--opacity-100 / opacity-0 transition-opacity → effet de fondu pour les images.-->
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" class="absolute inset-0 w-full object-cover opacity-0 transition-opacity duration-1000">
     </div>
-    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
-        <h2 class="text-4xl md:text-5xl font-bold drop-shadow-lg mb-4">Find Love Easily 💘</h2>
-        <p class="text-lg md:text-xl max-w-2xl mb-6 drop-shadow">Join thousands of singles looking for a real connection.</p>
-        <button class="bg-pink-600 px-6 py-3 rounded-full text-lg hover:bg-pink-700 transition">Get Started Now</button>
-    </div>
-</section>
-<!--il fallait qu'on ajoute du javascript pour que nos images scroll -->
-<script>
-    const slides = document.querySelectorAll('#slider img');
-    let current = 0;
 
-    function nextSlide() {
-        slides[current].classList.remove('opacity-100');
-        slides[current].classList.add('opacity-0');
-        current = (current + 1) % slides.length; //current = (current + 1) % slides.length → revient au début quand on atteint la dernière image.
-        slides[current].classList.remove('opacity-0');
-        slides[current].classList.add('opacity-100');
-    }
+    <!-- ============================== FOOTER ============================== -->
+    <div class="bg-brand-gray-extralight py-5">
+        <div class="max-w-[960px] mx-auto px-5 flex justify-between">
 
-    setInterval(nextSlide, 4000); // Change every 4 seconds
-</script>
+            <!-- Colonne 1: About Us -->
+            <div>
+                <h4 class="text-lg text-brand-blue font-normal">About Us</h4>
+                <!-- La classe 'divide-y' ajoute les lignes de séparation entre les éléments -->
+                <ul class="mt-3 divide-y divide-gray-300 text-xs text-brand-gray-light">
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Agency Info</a>
+                    </li>
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Services</a></li>
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Dating</a></li>
+                </ul>
+            </div>
 
-    <!--<div class="h-screen flex items-center justify-center">
-        <h1 class="text-4xl font-bold">Projet Base : HTML + Tailwind</h1>
-    </div-->
+            <!-- Colonne 2: Advice -->
+            <div>
+                <h4 class="text-lg text-brand-blue font-normal">Advice</h4>
+                <ul class="mt-3 divide-y divide-gray-300 text-xs text-brand-gray-light">
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">FAQs</a></li>
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Account</a></li>
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Contacts</a></li>
+                </ul>
+            </div>
 
-        <!-- Welcome Section -->
-<section class="max-w-7xl mx-auto px-4 py-12">
-    <div class="bg-white p-8 rounded-lg shadow">
-        <h2 class="text-3xl font-bold mb-4">Welcome to Our Site!</h2>
-        <p class="text-gray-700 mb-4">
-            Welcome to Goma Dating! We connect people from all over the world. Whether you are looking for friendship, romance, or meaningful relationships, our platform is designed to make connections easy and fun.
-        </p>
-        <p class="text-gray-700">
-            Our site offers a safe and engaging environment where singles can meet like-minded individuals. Sign up, create your profile, and start exploring today! </p>
-    </div>
-</section>
+            <!-- Colonne 3: Join In -->
+            <div>
+                <h4 class="text-lg text-brand-blue font-normal">Join In</h4>
+                <ul class="mt-3 divide-y divide-gray-300 text-xs text-brand-gray-light">
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Sign Up</a></li>
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Forums</a></li>
+                    <li><a href="#" class="block pt-[9px] pb-[2px] hover:text-black transition-colors">Promotions</a>
+                    </li>
+                </ul>
+            </div>
 
-
-    <!--Join free * featured profiles form-->
-    <section class="max-w-7x1 mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
-        <!--
-        max-w-7xl mx-auto px-4 -> contenu centré avec largeur maximale et padding. grid md:grid-cols-3 gap-8 -> mise en page en 3 colonnes sur écran moyen et plus, avec espace entre.
-        -->
-        <!--Form-->
-        <div class="md:col-span-1 bg-white p-6 rounded-lg shadow"> <!--bg-white p-6 rounded-lg shadow -> carte blache, coins arrondis,ombre-->
-            <h3 class="text-2x1 font-bold mb-4">Join Us - It's Free!</h3>
-                <form class="space-y-4"> <!--espace vertical entre chaque champ. Champs et boutons stylés avec Tailwind pour bordure, padding et hover.-->
-                    <div>
-                        <label class="block text-gray-700">I am a:</label>
-                        <select class="w-full border rounded p-2">
-                            <option>Man</option>
-                            <option>Woman</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700">Seeking a:</label>
-                        <select class="w-full border rounded p-2">
-                            <option>Man</option>
-                            <option>Woman</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700">Date of Birth:</label>
-                            <input type="date" class="w-full border rounded p-2">
-
-                    </div>
-                    <div>
-                        <label class="block text-gray-700">Email:</label>
-                        <input type="email" class="w-full border rounded p-2" placeholder="info@gomadating.com">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700">Password:</label>
-                        <input type="password" class="w-full border rounded p-2" placeholder="Password">
-                    </div>
-                    <button type="submit" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Join Free</button>
-                </form>
-        </div>
-
-        <!-- Featured Profiles -->
-    <div class="md:col-span-2 grid grid-cols-2 gap-4"> <!--2 profils par ligne-->
-        <div class="bg-white p-4 rounded-lg shadow"> <!--carte pour chaque profil-->
-            <img src="https://randomuser.me/api/portraits/women/1.jpg" class="w-full h-48 object-cover rounded" alt="Emma">
-            <div class="mt-2"> <!--Object-cover h-48 -> image recouvrant toute la zone, hauteur fixe.-->
-                <p class="font-bold">Emma, 23</p>
-                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
+            <!-- Colonne 4: Follow Us -->
+            <div>
+                <h4 class="text-lg text-brand-blue font-normal">Follow Us</h4>
+                <div class="flex space-x-3 mt-6">
+                    <a href="#"
+                        class="block w-8 h-8 bg-[url('../images/icon_01.png')] hover:opacity-75 transition-opacity"></a>
+                    <a href="#"
+                        class="block w-8 h-8 bg-[url('../images/icon_02.png')] hover:opacity-75 transition-opacity"></a>
+                    <a href="#"
+                        class="block w-8 h-8 bg-[url('../images/icon_03.png')] hover:opacity-75 transition-opacity"></a>
+                    <a href="#"
+                        class="block w-8 h-8 bg-[url('../images/icon_04.png')] hover:opacity-75 transition-opacity"></a>
+                </div>
             </div>
         </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-            <img src="https://randomuser.me/api/portraits/women/2.jpg" class="w-full h-48 object-cover rounded" alt="Emily">
-            <div class="mt-2">
-                <p class="font-bold">Emily, 22</p>
-                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
-            </div>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-            <img src="https://randomuser.me/api/portraits/men/3.jpg" class="w-full h-48 object-cover rounded" alt="John">
-            <div class="mt-2">
-                <p class="font-bold">John, 25</p>
-                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
-            </div>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-            <img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-full h-48 object-cover rounded" alt="Kevin">
-            <div class="mt-2">
-                <p class="font-bold">Kevin, 22</p>
-                <button class="mt-1 bg-pink-600 text-white px-3 py-1 rounded hover:bg-pink-700 transition">Contact</button>
-            </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- Footer -->
-<footer class="bg-gray-800 text-gray-200 mt-12">
-    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
-
-        <div>
-            <h4 class="font-bold mb-4">About Us</h4>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:text-white">Agency Info</a></li>
-                <li><a href="#" class="hover:text-white">Services</a></li>
-                <li><a href="#" class="hover:text-white">Dating</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4 class="font-bold mb-4">Advice</h4>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:text-white">FAQs</a></li>
-                <li><a href="#" class="hover:text-white">Account</a></li>
-                <li><a href="#" class="hover:text-white">Contacts</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4 class="font-bold mb-4">Join In</h4>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:text-white">Sign Up</a></li>
-                <li><a href="#" class="hover:text-white">Forums</a></li>
-                <li><a href="#" class="hover:text-white">Promotions</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4 class="font-bold mb-4">Follow Us</h4>
-            <div class="flex gap-4 mt-2">
-                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">F</a>
-                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">T</a>
-                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">I</a>
-                <a href="#" class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">Y</a>
-            </div>
-        </div>
-
     </div>
 
-    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-gray-400">
-        <p>© 2025 Goma Dating. All Rights Reserved.</p>
-    </div>
-</footer>
+    <footer class="text-white text-xs py-2">
+        <div class="max-w-[960px] mx-auto px-5">
+            <p>Dating © 2024 <a href="index-6.html" class="underline hover:no-underline">Privacy Policy</a></p>
+        </div>
+    </footer>
 
 </body>
 
