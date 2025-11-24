@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating Header</title>
+
+    <!-- Import de Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Import des polices Google (Roboto Slab pour le logo, Roboto pour le texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/src//images/favicon.ico" type="image/x-icon" />
+
+    <!-- Configuration personnalisée pour coller aux couleurs exactes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dating-blue-light': '#4dc9f6', // Couleur claire du logo/dégradé
+                        'dating-blue-dark': '#2db3e6',  // Couleur foncée du dégradé
+                        'dating-active': '#198ebc',     // Couleur du bouton actif (Search)
+                        'dating-gray': '#888888',       // Couleur du slogan
+                    },
+                    fontFamily: {
+                        'slab': ['"Roboto Slab"', 'serif'],
+                        'sans': ['"Roboto"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-sans">
+
+    <!-- Ligne bleue supérieure -->
+    <div class="w-full h-2 bg-dating-blue-light"></div>
+
+    <header class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-8">
+
+        <!-- LOGO SECTION -->
+        <div class="flex flex-col items-start">
+            <div class="relative">
+                <!-- Texte principal -->
+                <h1 class="font-slab text-6xl font-bold text-dating-blue-light tracking-tight">
+                    Dating
+                </h1>
+                <!-- Petit cœur en exposant -->
+                <svg class="w-6 h-6 text-dating-blue-light absolute -top-1 -right-6 fill-current"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+            </div>
+            <!-- Slogan -->
+            <p class="text-dating-gray text-xs font-medium tracking-widest mt-1 uppercase">
+                Find your love with us!
+            </p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="flex rounded-md overflow-hidden text-white text-sm shadow-sm">
+
+            <!-- Home (Normal) -->
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">
+                Home
+            </a>
+
+            <!-- Search (Active / Darker) -->
+            <a href="#"
+                class="px-8 py-3 bg-dating-active border-r border-white/20 shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)]">
+                Search
+            </a>
+
+            <!-- Join (Normal) -->
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">
+                Join
+            </a>
+
+            <!-- Blog (Normal) -->
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">
+                Blog
+            </a>
+
+            <!-- News (Normal) -->
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">
+                News
+            </a>
+
+            <!-- Contact (Normal - Last item) -->
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark hover:opacity-90 transition">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- Début du background floral (simulation visuelle pour le bas) -->
+    <div class="absolute bottom-0 left-0 w-full -z-10 opacity-10 pointer-events-none">
+        <!-- Ici viendrait l'image de fond grise si nécessaire -->
+    </div>
+
+    <!-- À placer juste après la balise </header> -->
+
+    <main class="w-full bg-white relative overflow-hidden">
+
+        <!-- Décoration de fond (Simulation des motifs floraux gris) -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+            <div
+                class="absolute -left-20 top-10 w-96 h-96 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50">
+            </div>
+            <div
+                class="absolute right-0 bottom-0 w-[500px] h-[500px] bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50">
+            </div>
+        </div>
+
+        <section class="max-w-6xl mx-auto px-4 py-12 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- PARTIE GAUCHE : FORMULAIRE DE RECHERCHE -->
+                <div class="w-full lg:w-1/3">
+                    <h2 class="text-4xl font-bold text-gray-700 mb-6">Search</h2>
+
+                    <form class="space-y-4">
+
+                        <!-- I am a -->
+                        <div class="group">
+                            <label class="block text-gray-500 text-sm mb-1">I am a:</label>
+                            <div
+                                class="flex h-9 border border-gray-300 bg-white rounded-sm shadow-sm relative hover:border-gray-400 transition">
+                                <select
+                                    class="w-full h-full px-3 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                    <option>Man</option>
+                                    <option>Woman</option>
+                                </select>
+                                <!-- Fausse flèche personnalisée -->
+                                <div
+                                    class="w-8 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 pointer-events-none absolute right-0 top-0">
+                                    ▼
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seeking a -->
+                        <div class="group">
+                            <label class="block text-gray-500 text-sm mb-1">Seeking a:</label>
+                            <div
+                                class="flex h-9 border border-gray-300 bg-white rounded-sm shadow-sm relative hover:border-gray-400 transition">
+                                <select
+                                    class="w-full h-full px-3 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                    <option>Woman</option>
+                                    <option>Man</option>
+                                </select>
+                                <div
+                                    class="w-8 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 pointer-events-none absolute right-0 top-0">
+                                    ▼
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Between (Age) -->
+                        <div>
+                            <label class="block text-gray-500 text-sm mb-1">Between</label>
+                            <div class="flex items-center gap-3">
+                                <!-- Age Min -->
+                                <div
+                                    class="flex h-9 w-20 border border-gray-300 bg-white rounded-sm shadow-sm relative">
+                                    <select
+                                        class="w-full h-full pl-2 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                        <option>18</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                    </select>
+                                    <div
+                                        class="w-6 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 pointer-events-none absolute right-0 top-0">
+                                        ▼
+                                    </div>
+                                </div>
+
+                                <span class="text-sm text-gray-500">and</span>
+
+                                <!-- Age Max -->
+                                <div
+                                    class="flex h-9 w-20 border border-gray-300 bg-white rounded-sm shadow-sm relative">
+                                    <select
+                                        class="w-full h-full pl-2 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                        <option>25</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                    </select>
+                                    <div
+                                        class="w-6 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 pointer-events-none absolute right-0 top-0">
+                                        ▼
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="group">
+                            <label class="block text-gray-500 text-sm mb-1">Country</label>
+                            <div
+                                class="flex h-9 border border-gray-300 bg-white rounded-sm shadow-sm relative hover:border-gray-400 transition">
+                                <select
+                                    class="w-full h-full px-3 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                    <option>United States</option>
+                                    <option>Canada</option>
+                                    <option>United Kingdom</option>
+                                </select>
+                                <div
+                                    class="w-8 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 pointer-events-none absolute right-0 top-0">
+                                    ▼
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Region -->
+                        <div class="group">
+                            <label class="block text-gray-500 text-sm mb-1">Region</label>
+                            <div
+                                class="flex h-9 border border-gray-300 bg-white rounded-sm shadow-sm relative hover:border-gray-400 transition">
+                                <select
+                                    class="w-full h-full px-3 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                    <option>New York</option>
+                                    <option>California</option>
+                                    <option>Texas</option>
+                                </select>
+                                <div
+                                    class="w-8 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 pointer-events-none absolute right-0 top-0">
+                                    ▼
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bouton Submit -->
+                        <div class="flex justify-end pt-2">
+                            <button type="button"
+                                class="bg-dating-blue-dark hover:bg-dating-active text-white text-sm font-medium py-2 px-6 rounded-full shadow-md transition-colors duration-200">
+                                Search Single
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- PARTIE DROITE : NOUVEAUX MEMBRES -->
+                <div class="w-full lg:w-2/3">
+                    <h2 class="text-4xl font-bold text-gray-700 mb-8">New members</h2>
+
+                    <!-- Grille 4 colonnes -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+
+                        <!-- Item 1 (N&B) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=11" alt="Member"
+                                class="w-full h-full object-cover grayscale">
+                        </div>
+                        <!-- Item 2 (Couleur) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=59" alt="Member" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Item 3 (Couleur - Blonde) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=5" alt="Member" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Item 4 (Couleur - Bandana) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=9" alt="Member" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Item 5 (Couleur - Gros plan) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=24" alt="Member" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Item 6 (Lunettes homme) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=53" alt="Member" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Item 7 (Lunettes femme) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=20" alt="Member" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Item 8 (Ombre/Cheveux) -->
+                        <div
+                            class="bg-white p-1 border border-gray-200 shadow-sm aspect-square hover:shadow-md transition">
+                            <img src="https://i.pravatar.cc/300?img=26" alt="Member"
+                                class="w-full h-full object-cover grayscale">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- À insérer après la fermeture de la <div class="flex flex-col lg:flex-row gap-12"> précédente, 
+     mais avant la fermeture de la balise </section> ou </main> -->
+
+            <div class="flex flex-col lg:flex-row gap-12 mt-16 pt-8">
+
+                <!-- COLONNE GAUCHE : Quick Dating Searches -->
+                <div class="w-full lg:w-1/2">
+                    <h3 class="text-3xl font-bold text-gray-600 mb-6">Quick Dating Searches</h3>
+
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipiscing
+                        tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis
+                        quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis
+                        pretium ipsum, et commodo.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Liste Filles -->
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Girls In America
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Girls In Australia
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Girls In South Africa
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Girls In The United Kingdom
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Liste Garçons -->
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Guys In America
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Guys In Australia
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Guys In South Africa
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="text-[#4dc9f6] text-sm hover:underline hover:text-[#2db3e6] transition-colors">
+                                    - Guys In The United Kingdom
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- COLONNE DROITE : About Us -->
+                <div class="w-full lg:w-1/2">
+                    <h3 class="text-3xl font-bold text-gray-600 mb-6">About Us</h3>
+
+                    <div class="space-y-6 text-sm leading-relaxed text-gray-500">
+                        <p>
+                            <a href="#" class="text-[#4dc9f6] hover:underline">Lorem ipsum dolor sit amet,
+                                consecteadipsing elit. Etiam sed hendrerit dolor. Fusce vitae leo lacus, sed blandit
+                                leo. Nulla ac.</a>
+                        </p>
+
+                        <p>
+                            Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor
+                            adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam
+                            consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu
+                            ultrcies nibh. Vivamus mollis pretium ipsum, et commodo tortor molestiest. Cras interdum
+                            nisi non elitrosticl rhoncus ut posuere lectus fermentum.
+                            <a href="#" class="text-[#4dc9f6] hover:underline">Peltesquel habitant morbi tristique
+                                senectus et netu</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="w-full mt-24">
+
+        <!-- Partie Principale du Footer -->
+        <div class="max-w-6xl mx-auto px-4 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Colonne 1 : About Us -->
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">About Us</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Agency Info</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Services</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Dating</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 2 : Advice -->
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Advice</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">FAQs</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Account</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3 : Join In -->
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Join In</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Sign Up</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Forums</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2">
+                            <a href="#" class="hover:text-[#4dc9f6] transition-colors">Promotions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 4 : Follow Us (Socials) -->
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Follow Us</h4>
+                    <div class="flex gap-2">
+
+                        <!-- RSS Icon (Orange) -->
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-orange-400 to-orange-500 shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" />
+                            </svg>
+                        </a>
+
+                        <!-- Google+ Icon (Dark Grey) -->
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-gray-700 to-gray-800 shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M7 14.8c-2.3 0-3.3-1.6-3.3-2.8 0-1.6 1.2-2.8 3.3-2.8 1.1 0 1.9.4 2.3.8L10.5 8c-.8-.7-1.8-1.2-3.4-1.2-2.7 0-4.8 2.2-4.8 4.9s2.1 4.9 4.8 4.9c2.8 0 4.6-2 4.6-4.6v-.5H7v2.5zm10.5-3.5h-2v2h2v2h2v-2h2v-2h-2v-2h-2v2z" />
+                            </svg>
+                        </a>
+
+                        <!-- Facebook Icon (Blue) -->
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-[#4c66a4] to-[#3b5998] shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                            </svg>
+                        </a>
+
+                        <!-- Twitter Icon (Light Blue) -->
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-[#33ccff] to-[#00aced] shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="w-full bg-[#4dc9f6] py-3">
+            <div class="max-w-6xl mx-auto px-4">
+                <p class="text-white text-xs">
+                    Dating &copy; 2012 <a href="#" class="hover:underline">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

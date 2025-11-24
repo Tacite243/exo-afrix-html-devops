@@ -135,113 +135,111 @@
                 </div>
 
                 <!-- Section inférieure : Contenu principal -->
-                <div class="flex gap-5 mt-20">
+                <div class="flex justify-between mt-[91px]">
+
                     <!-- Colonne gauche : Welcome -->
-                    <div class="w-1/3">
-                        <h2 class="text-2xl font-bold text-gray-700">Welcome to Our Site!</h2>
-                        <p class="mt-5"><span class="text-brand-blue-light">Lorem ipsum dolor sit amet, consecteadipsing
-                                elit. Etiam sed hendrerit dolor. Fusce vitae leo lacus, sed blandit leo. Nulla ac
-                                facilisis est.</span></p>
-                        <p class="mt-5">Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio,
-                            porttitor adipscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam
-                            consectetur dictum turpis quis dignissimsi.</p>
-                        <div class="text-right mt-8">
+                    <div class="w-[300px]">
+                        <h2 class="text-2xl font-bold text-[#6b6b6b]">Welcome to Our Site!</h2>
+                        <p class="mt-[19px] pr-[44px]"><span class="text-brand-blue-light">Lorem ipsum dolor sit amet,
+                                consecteadipsing elit. Etiam sed hendrerit dolor. Fusce vitae leo lacus, sed blandit
+                                leo. Nulla ac facilisis est.</span></p>
+                        <p class="mt-5 pr-[44px]">Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius
+                            odio, porttitor adipscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec.
+                            Etiam consectetur dictum turpis quis dignissimsi.</p>
+                        <div class="text-right mt-[33px] pr-[44px]">
                             <a href="#"
-                                class="inline-block bg-brand-blue hover:bg-brand-blue-dark text-white text-xs py-2 px-5 rounded-full transition-colors">Read
+                                class="inline-block bg-[#52c7f5] hover:bg-brand-blue-dark text-white text-xs py-[7.5px] px-5 rounded-[13px] transition-colors">Read
                                 More</a>
                         </div>
                     </div>
 
                     <!-- Colonne droite : Carrousels -->
-                    <div class="w-2/3">
-                        <h3 class="text-xl text-gray-700">Females Online (2,432)</h3>
-                        <!-- Le carrousel nécessite du JS. C'est une grille statique qui peut déborder horizontalement -->
-                        <div class="overflow-x-auto">
-                            <div class="flex space-x-4 mt-5">
-                                <!-- Répéter cet élément pour chaque profil -->
-                                <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_01.jpg" alt="Emma"
-                                        class="w-full h-full object-cover">
+                    <div class="w-[620px]">
+                        <!-- Carrousel 1 : Females Online -->
+                        <div>
+                            <div class="flex justify-between items-center mb-5">
+                                <h3 class="text-xl font-normal text-[#6b6b6b]">Females Online (2,432)</h3>
+                                <div class="flex space-x-1">
+                                    <a href="#female-carousel-start"><img src="/src/images/prevcar.png" alt="Previous"
+                                            class="w-[27px] h-[27px] opacity-50 hover:opacity-100"></a>
+                                    <a href="#female-carousel-end"><img src="/src/images/nextcar.png" alt="Next"
+                                            class="w-[27px] h-[27px] hover:opacity-75"></a>
+                                </div>
+                            </div>
+                            <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth space-x-[17px] pb-2">
+                                <div id="female-carousel-start"
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/src/images/page1_img_01.jpg" alt="Emma" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        Emma, 23
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Emma, 23</div>
                                 </div>
                                 <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_02.jpg" alt="Emily"
-                                        class="w-full h-full object-cover">
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/src/images/page1_img_02.jpg" alt="Emily" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        Emily, 22
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Emily, 22</div>
                                 </div>
                                 <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_03.jpg" alt="Sarah"
-                                        class="w-full h-full object-cover">
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/src/images/page1_img_03.jpg" alt="Sarah" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        Sarah, 23
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Sarah, 23</div>
                                 </div>
-                                <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_04.jpg" alt="Taylor"
-                                        class="w-full h-full object-cover">
+                                <div id="female-carousel-end"
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/src/images/page1_img_04.jpg" alt="Taylor" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        Taylor, 25
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Taylor, 25</div>
                                 </div>
-                                <!-- Fin de l'élément répétable -->
                             </div>
                         </div>
 
-                        <hr class="my-6 border-gray-200">
+                        <hr class="my-[23px] border-[#efefef]">
 
-                        <h3 class="text-xl text-gray-700">Males Online (1,789)</h3>
-                        <div class="overflow-x-auto">
-                            <div class="flex space-x-4 mt-5">
-                                <!-- Répéter cet élément pour chaque profil -->
-                                <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_05.jpg" alt="Den"
-                                        class="w-full h-full object-cover">
+                        <!-- Carrousel 2 : Males Online -->
+                        <div>
+                            <div class="flex justify-between items-center mb-5">
+                                <h3 class="text-xl font-normal text-[#6b6b6b]">Males Online (1,789)</h3>
+                                <div class="flex space-x-1">
+                                    <a href="#male-carousel-start"><img src="/src/images/prevcar.png" alt="Previous"
+                                            class="w-[27px] h-[27px] opacity-50 hover:opacity-100"></a>
+                                    <a href="#male-carousel-end"><img src="/src/images/nextcar.png" alt="Next"
+                                            class="w-[27px] h-[27px] hover:opacity-75"></a>
+                                </div>
+                            </div>
+                            <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth space-x-[17px] pb-2">
+                                <div id="male-carousel-start"
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/src/images/page1_img_05.jpg" alt="Den" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        Den, 23
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Den, 23</div>
                                 </div>
                                 <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_06.jpg" alt="John"
-                                        class="w-full h-full object-cover">
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/src/images/page1_img_06.jpg" alt="John" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        John, 20
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        John, 20</div>
                                 </div>
                                 <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_07.jpg" alt="Jose"
-                                        class="w-full h-full object-cover">
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/src/images/page1_img_07.jpg" alt="Jose" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        Jose, 25
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Jose, 25</div>
                                 </div>
-                                <div
-                                    class="group relative flex-shrink-0 w-[142px] h-[139px] bg-white border border-gray-200 p-1.5 overflow-hidden">
-                                    <img src="/src/images/page1_img_08.jpg" alt="Kevin"
-                                        class="w-full h-full object-cover">
+                                <div id="male-carousel-end"
+                                    class="snap-start shrink-0 w-[140px] h-[137px] bg-white border border-[#ebebeb] p-[6px] overflow-hidden group relative">
+                                    <img src="/srcimages/page1_img_08.jpg" alt="Kevin" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        Kevin, 22
-                                    </div>
+                                        class="absolute bottom-[-1px] left-0 w-full bg-black bg-opacity-70 text-white p-1.5 text-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        Kevin, 22</div>
                                 </div>
-                                <!-- Fin de l'élément répétable -->
                             </div>
                         </div>
                     </div>
