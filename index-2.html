@@ -1,177 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datting</title>
+    <title>Dating - Join</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="/src/images/favicon.ico" type="image/x-icon" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dating-blue-light': '#4dc9f6',
+                        'dating-blue-dark': '#2db3e6',
+                        'dating-active': '#198ebc',
+                        'dating-gray': '#888888',
+                    },
+                    fontFamily: {
+                        'slab': ['"Roboto Slab"', 'serif'],
+                        'sans': ['"Roboto"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <header>
-        <div class="nav-bar">
-            <div class="logo">
-                <!-- insertion logo -->
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </div>
-            <div class="links">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Search</a></li>
-                    <li><a href="">Join</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">New</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
+<body class="bg-white font-sans flex flex-col min-h-screen">
 
+    <!-- ================= HEADER ================= -->
+    <div class="w-full h-2 bg-dating-blue-light"></div>
+
+    <header
+        class="flex justify-between items-center pt-11 pb-4 gap-8 max-w-6xl mx-auto px-4 w-full">
+        <div class="flex flex-col items-start">
+            <div class="relative">
+                <h1 class="font-slab text-6xl font-bold text-dating-blue-light tracking-tight">
+                    Dating
+                </h1>
+                <svg class="w-6 h-6 text-dating-blue-light absolute -top-1 -right-6 fill-current"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+            </div>
+            <p class="text-dating-gray text-xs font-medium tracking-widest mt-1 uppercase">
+                Find your love with us!
+            </p>
         </div>
-    </header>
-    <main>
-        <section>
-            <div class="contenair">
-                <div class="testmonials">
-                    <h2>Testmonials</h2>
-                    <div class="card">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit. Nesciunt facilis
-                            inventore, ut sapiente ea, est maiores quia officiis molestias aliquam laborum veritatis. Ut
-                            nesciunt iusto vitae molestias culpa.</p>
-                        <p>Sara, 24 years, New York</p>
-                    </div>
-                    <div class="card">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit. Nesciunt facilis
-                            inventore, ut sapiente ea, est maiores quia officiis molestias aliquam laborum veritatis. Ut
-                            nesciunt iusto vitae molestias culpa.</p>
-                        <p>Laura, 22 years, New York</p>
-                    </div>
-                    <div class="card">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit. Nesciunt facilis
-                            inventore, ut sapiente ea, est maiores quia officiis molestias aliquam laborum veritatis. Ut
-                            nesciunt iusto vitae molestias culpa.</p>
-                        <p>Sara, 24 years, New York</p>
-                    </div>
-                    <div class="card">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit. Nesciunt facilis
-                            inventore, ut sapiente ea, est maiores quia officiis molestias aliquam laborum veritatis. Ut
-                            nesciunt iusto vitae molestias culpa.</p>
-                        <p>Sara, 24 years, New York</p>
-                    </div>
-                </div>
-            </div>
-            <div class="inscription">
-                <form action="">
-                    <div>
-                        <label for="">I am a:</label><br>
-                        <select class="">
-                            <option>-</option>
-                            <option>Man</option>
-                        </select>
-                    </div>
 
-                    <div>
-                        <label for="">seeking a:</label><br>
-                        <select class="">
-                            <option>-</option>
-                            <option>Man</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="">date of birth:</label><br>
-                        <select class="">
-                            <option>day</option>
-                        </select>
-                        <select class="">
-                            <option>m</option>
-                        </select>
-                        <select class="">
-                            <option>y</option>
-                        </select>
-                    </div>
-                </form>
+        <nav class="flex rounded-md overflow-hidden text-white text-sm shadow-sm">
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">Home</a>
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">Search</a>
+            <a href="#"
+                class="px-8 py-3 bg-dating-active border-r border-white/20 shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)]">Join</a>
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">Blog</a>
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">News</a>
+            <a href="#"
+                class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark hover:opacity-90 transition">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="w-full relative flex-grow overflow-hidden">
+
+        <!-- Fond floral -->
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+            <div
+                class="absolute -left-20 top-10 w-96 h-96 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50">
             </div>
-        </section>
-        <section>
-            <h1>Special Offers</h1>
-            <div class="container">
-                <div class="card">
-                    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, pariatur excepturi.
-                            Aliquid aperiam consequatur itaque in. Sunt explicabo impedit ex quidem maiores nostrum,
-                            excepturi vero in, totam et quibusdam id!</a></p>
-                    <p>Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipscing
-                        tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis
-                        quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis
-                        pretium ipsum, et commodo tortor molestiest. Cras interdum nisi non elitrosticl</p>
+            <div
+                class="absolute right-0 bottom-20 w-[600px] h-[600px] bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50">
+            </div>
+        </div>
+
+        <section class="max-w-6xl mx-auto px-4 py-12 relative z-10">
+
+            <!-- MODIFICATION ICI : Changement des proportions des colonnes -->
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- COLONNE GAUCHE : Testimonials (Plus large : lg:w-7/12) -->
+                <div class="w-full lg:w-7/12">
+                    <h2 class="text-4xl font-bold text-gray-700 mb-8">Testimonials</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+                        <!-- Témoignage 1 -->
+                        <div class="flex gap-3">
+                            <div class="text-[#8cdbf7] text-6xl leading-none font-serif -mt-2">“</div>
+                            <div>
+                                <p
+                                    class="text-[#4dc9f6] text-sm underline leading-relaxed cursor-pointer hover:no-underline">
+                                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Praesent vestibulum
+                                    molestie lacusenean nonum hendrerit mauris. Phasellus porta...
+                                </p>
+                                <div class="text-right mt-1 text-xs text-gray-500">
+                                    <span class="font-bold text-gray-700">Sara</span>, 24 years, New York
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Témoignage 2 -->
+                        <div class="flex gap-3">
+                            <div class="text-[#8cdbf7] text-6xl leading-none font-serif -mt-2">“</div>
+                            <div>
+                                <p
+                                    class="text-[#4dc9f6] text-sm underline leading-relaxed cursor-pointer hover:no-underline">
+                                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Praesent vestibulum
+                                    molestie lacusenean nonum hendrerit mauris. Phasellus porta...
+                                </p>
+                                <div class="text-right mt-1 text-xs text-gray-500">
+                                    <span class="font-bold text-gray-700">Laura</span>, 22 years, New York
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Témoignage 3 -->
+                        <div class="flex gap-3">
+                            <div class="text-[#8cdbf7] text-6xl leading-none font-serif -mt-2">“</div>
+                            <div>
+                                <p
+                                    class="text-[#4dc9f6] text-sm underline leading-relaxed cursor-pointer hover:no-underline">
+                                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Praesent vestibulum
+                                    molestie lacusenean nonum hendrerit mauris. Phasellus porta...
+                                </p>
+                                <div class="text-right mt-1 text-xs text-gray-500">
+                                    <span class="font-bold text-gray-700">Robert</span>, 27 years, New York
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Témoignage 4 -->
+                        <div class="flex gap-3">
+                            <div class="text-[#8cdbf7] text-6xl leading-none font-serif -mt-2">“</div>
+                            <div>
+                                <p
+                                    class="text-[#4dc9f6] text-sm underline leading-relaxed cursor-pointer hover:no-underline">
+                                    Lorem ipsum dolor sit amet consectetuer adipiscing elit. Praesent vestibulum
+                                    molestie lacusenean nonum hendrerit mauris. Phasellus porta...
+                                </p>
+                                <div class="text-right mt-1 text-xs text-gray-500">
+                                    <span class="font-bold text-gray-700">Bradley</span>, 24 years, New York
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, pariatur excepturi.
-                            Aliquid aperiam consequatur itaque in. Sunt explicabo impedit ex quidem maiores nostrum,
-                            excepturi vero in, totam et quibusdam id!</a></p>
-                    <p>Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipscing
-                        tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis
-                        quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis
-                        pretium ipsum, et commodo tortor molestiest. Cras interdum nisi non elitrosticl</p>
+
+                <!-- COLONNE DROITE : Formulaire (Plus étroite : lg:w-5/12 et max-w-sm) -->
+                <div class="w-full lg:w-5/12 lg:pl-4">
+                    <h2 class="text-4xl font-bold text-gray-700 mb-6">
+                        Join us, <span class="text-dating-blue-light">it`s free!</span>
+                    </h2>
+
+                    <!-- Ajout de max-w-sm pour forcer la compacité comme sur l'original -->
+                    <form class="space-y-2 max-w-sm">
+
+                        <!-- I am a -->
+                        <div>
+                            <label class="block text-gray-500 text-[11px] mb-0.5">I am a:</label>
+                            <div class="flex h-8 border border-gray-300 bg-white rounded-sm relative shadow-sm">
+                                <select
+                                    class="w-full h-full px-3 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                    <option>Man</option>
+                                    <option>Woman</option>
+                                </select>
+                                <div
+                                    class="w-8 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 absolute right-0 top-0 pointer-events-none">
+                                    ▼</div>
+                            </div>
+                        </div>
+
+                        <!-- Seeking a -->
+                        <div>
+                            <label class="block text-gray-500 text-[11px] mb-0.5">Seeking a:</label>
+                            <div class="flex h-8 border border-gray-300 bg-white rounded-sm relative shadow-sm">
+                                <select
+                                    class="w-full h-full px-3 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                    <option>Woman</option>
+                                    <option>Man</option>
+                                </select>
+                                <div
+                                    class="w-8 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 absolute right-0 top-0 pointer-events-none">
+                                    ▼</div>
+                            </div>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div>
+                            <label class="block text-gray-500 text-[11px] mb-0.5">Date of Birth</label>
+                            <div class="flex gap-2">
+                                <div
+                                    class="flex-1 flex h-8 border border-gray-300 bg-white rounded-sm relative shadow-sm">
+                                    <select
+                                        class="w-full h-full pl-2 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                        <option>Day</option>
+                                        <option>01</option>
+                                    </select>
+                                    <div
+                                        class="w-6 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 absolute right-0 top-0 pointer-events-none">
+                                        ▼</div>
+                                </div>
+                                <div
+                                    class="flex-1 flex h-8 border border-gray-300 bg-white rounded-sm relative shadow-sm">
+                                    <select
+                                        class="w-full h-full pl-2 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                        <option>Month</option>
+                                        <option>Jan</option>
+                                    </select>
+                                    <div
+                                        class="w-6 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 absolute right-0 top-0 pointer-events-none">
+                                        ▼</div>
+                                </div>
+                                <div
+                                    class="flex-1 flex h-8 border border-gray-300 bg-white rounded-sm relative shadow-sm">
+                                    <select
+                                        class="w-full h-full pl-2 appearance-none bg-transparent text-gray-600 text-sm outline-none z-10 cursor-pointer">
+                                        <option>Year</option>
+                                        <option>1990</option>
+                                    </select>
+                                    <div
+                                        class="w-6 h-full bg-[#f3f3f3] border-l border-gray-300 flex items-center justify-center text-[10px] text-gray-500 absolute right-0 top-0 pointer-events-none">
+                                        ▼</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- E-mail -->
+                        <div>
+                            <label class="block text-gray-500 text-[11px] mb-0.5">E-mail:</label>
+                            <input type="email"
+                                class="w-full h-8 border border-gray-300 bg-white rounded-sm px-3 text-sm text-gray-600 outline-none focus:border-dating-blue-light transition shadow-inner">
+                        </div>
+
+                        <!-- Password -->
+                        <div>
+                            <label class="block text-gray-500 text-[11px] mb-0.5">Password:</label>
+                            <input type="password"
+                                class="w-full h-8 border border-gray-300 bg-white rounded-sm px-3 text-sm text-gray-600 outline-none focus:border-dating-blue-light transition shadow-inner">
+                        </div>
+
+                        <!-- Button -->
+                        <div class="flex justify-end mt-4 pt-2">
+                            <button type="button"
+                                class="bg-dating-blue-dark hover:bg-dating-active text-white font-medium py-1.5 px-6 rounded-full shadow-md text-sm transition-colors duration-200">
+                                Join Free
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
-                <div class="card">
-                    <p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, pariatur excepturi.
-                            Aliquid aperiam consequatur itaque in. Sunt explicabo impedit ex quidem maiores nostrum,
-                            excepturi vero in, totam et quibusdam id!</a></p>
-                    <p>Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipscing
-                        tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis
-                        quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis
-                        pretium ipsum, et commodo tortor molestiest. Cras interdum nisi non elitrosticl</p>
+
+            </div>
+
+            <!-- Special Offers -->
+            <div class="mt-16 pt-8 border-t border-gray-200">
+                <h3 class="text-4xl font-bold text-gray-700 mb-8">Special Offers</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <a href="#" class="block text-[#4dc9f6] text-sm leading-relaxed mb-4 hover:underline">
+                            Lorem ipsum dolor sit amet, consecteadipsing elit. Etiam sed hendrerit dolor. Fusce vitae
+                            leo lacus, sed blandit leo. Nulla ac facilisis est.
+                        </a>
+                        <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                            Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor
+                            adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam
+                            consectetur dictum turpis quis dignissimsi.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="block text-[#4dc9f6] text-sm leading-relaxed mb-4 hover:underline">
+                            Opsum dolor sit amet, consecteadipsing elit. Etiam sed hendrerit dolor. Fusce vitae leo
+                            lacus, sed blandit leo. Nulla ac facilisis est.
+                        </a>
+                        <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                            Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor
+                            adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam
+                            consectetur dictum turpis quis dignissimsi.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="block text-[#4dc9f6] text-sm leading-relaxed mb-4 hover:underline">
+                            Dolor sit amet, consecteadipsing elit. Etiam sed hendrerit dolor. Fusce vitae leo lacus, sed
+                            blandit leo. Nulla ac facilisis est.
+                        </a>
+                        <p class="text-gray-500 text-sm leading-relaxed text-justify">
+                            Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor
+                            adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam
+                            consectetur dictum turpis quis dignissimsi.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-                <section>
-            <div class="container">
-                <div class="card">
-                    <h2>About Us</h2>
-                    <ul>
-                        <li><a href="">Agency Info</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Dating</a></li>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full mt-16">
+        <div class="max-w-6xl mx-auto px-4 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">About Us</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Agency
+                                Info</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Services</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Dating</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="card">
-                    <h2>Advice</h2>
-                    <ul>
-                        <li><a href="">FAQs</a></li>
-                        <li><a href="">Account</a></li>
-                        <li><a href="">Contacts</a></li>
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Advice</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">FAQs</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Account</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Contacts</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="card">
-                    <h2>Join In</h2>
-                    <ul>
-                        <li><a href="">Sign Up</a></li>
-                        <li><a href="">Forums</a></li>
-                        <li><a href="">Promotions</a></li>
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Join In</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Sign Up</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Forums</a>
+                        </li>
+                        <li class="border-b border-gray-200 py-2"><a href="#"
+                                class="hover:text-[#4dc9f6]">Promotions</a></li>
                     </ul>
                 </div>
-                <div class="card">
-                    <h2>Follow Us</h2>
-                    <ul>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        
-                    </ul>
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Follow Us</h4>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-orange-400 to-orange-500 shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-gray-700 to-gray-800 shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M7 14.8c-2.3 0-3.3-1.6-3.3-2.8 0-1.6 1.2-2.8 3.3-2.8 1.1 0 1.9.4 2.3.8L10.5 8c-.8-.7-1.8-1.2-3.4-1.2-2.7 0-4.8 2.2-4.8 4.9s2.1 4.9 4.8 4.9c2.8 0 4.6-2 4.6-4.6v-.5H7v2.5zm10.5-3.5h-2v2h2v2h2v-2h2v-2h-2v-2h-2v2z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-[#4c66a4] to-[#3b5998] shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded bg-gradient-to-b from-[#33ccff] to-[#00aced] shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <p>Dating © 2012 Privacy Policy</p>
-        </section>
+        </div>
+        <div class="w-full bg-[#4dc9f6] py-3">
+            <div class="max-w-6xl mx-auto px-4">
+                <p class="text-white text-xs">Dating &copy; 2012 <a href="#" class="hover:underline">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
     </footer>
-
 </body>
 
 </html>

@@ -1,143 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Dating - Blog</title>
+    <link rel="shortcut icon" href="/src/images/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dating-blue-light': '#4dc9f6',
+                        'dating-blue-dark': '#2db3e6',
+                        'dating-active': '#198ebc',
+                        'dating-gray': '#888888',
+                    },
+                    fontFamily: {
+                        'slab': ['"Roboto Slab"', 'serif'],
+                        'sans': ['"Roboto"', 'sans-serif'],
+                    },
+                    maxWidth: {
+                        'site': '980px', // Largeur unifiée pour tout le site
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <header>
-        <div class="nav-bar">
-            <div class="logo">
-                <!-- insertion logo -->
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </div>
-            <div class="links">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Search</a></li>
-                    <li><a href="">Join</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">New</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
+<body class="bg-white font-sans flex flex-col min-h-screen">
 
+    <!-- ================= HEADER ================= -->
+    <div class="w-full h-1.5 bg-dating-blue-light"></div>
+
+    <header class="max-w-site w-full mx-auto px-4 py-12 flex flex-col md:flex-row items-end justify-between gap-8 relative z-20">
+        <div class="flex flex-col items-start">
+            <div class="relative leading-none">
+                <h1 class="font-slab text-6xl font-bold text-dating-blue-light tracking-tight leading-none">Dating</h1>
+                <svg class="w-6 h-6 text-dating-blue-light absolute -top-1 -right-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+            </div>
+            <p class="text-dating-gray text-[10px] font-medium tracking-widest mt-2 uppercase ml-1">Find your love with us!</p>
         </div>
-    </header>
-    <main>
-        <section>
-            <div class="container">
-                <div class="blog">
-                    <h1>Blog</h1>
-                    <div class="card">
-                        <h1>Praesent justo dolor, lobortis quis lobortis dignissi</h1>
-                        <p>Wednesday, 07 July 2011 09:54 Posted by Admin</p>
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit. Nesciunt facilis
-                            inventore, ut sapiente ea, est maiores quia officiis molestias aliquam laborum veritatis. Ut
-                            nesciunt iusto vitae molestias culpa.</p>
-                    </div>
-                </div>
-            </div>
-            <button>Read more </button>
-            <div class="Categories">
-                <div class="Categories">
-                    <h1>Categories</h1>
-                    <ul>
-                        <ol>Vestibulum ante ipsum primis</ol>
-                        <ol>In faucibus orci luctus et</ol>
-                        <ol>Ultrices posuere cubilia Curae</ol>
-                        <ol>Suspendisse sollicitudin velit sed leo</ol>
-                        <ol>Ut pharetra augue nec augue</ol>
-                        <ol>Nam elit agna,endrerit sit amet</ol>
-                        <ol>Tincidunt ac, viverra sed, nulla</ol>
-                        <ol>Donec porta diam eu massa</ol>
-                        <ol>Quisque diam lorem</ol>
-                        <ol>Interdum vitae,dapibus ac</ol>
-                        <ol>Scelerisque vitae, pede</ol>
-                        <ol>Donec eget tellus non erat</ol>
 
-                    </ul>
-                </div>
-            </div>
-            <div class="container">
-                <div class="blog">
-                    <h1>Blog</h1>
-                    <div class="card">
-                        <h1>Praesent justo dolor, lobortis quis lobortis dignissi</h1>
-                        <p>Wednesday, 07 July 2011 09:54 Posted by Admin</p>
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit. Nesciunt facilis
-                            inventore, ut sapiente ea, est maiores quia officiis molestias aliquam laborum veritatis. Ut
-                            nesciunt iusto vitae molestias culpa.</p>
+        <nav class="flex rounded-md overflow-hidden text-white text-sm shadow-sm mb-1">
+            <a href="#" class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">Home</a>
+            <a href="#" class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">Search</a>
+            <a href="#" class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">Join</a>
+            <a href="#" class="px-8 py-3 bg-dating-active border-r border-white/20 shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)]">Blog</a>
+            <a href="#" class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark border-r border-white/20 hover:opacity-90 transition">News</a>
+            <a href="#" class="px-8 py-3 bg-gradient-to-b from-dating-blue-light to-dating-blue-dark hover:opacity-90 transition">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="w-full relative flex-grow overflow-hidden">
+
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+            <div class="absolute -left-20 top-0 w-96 h-96 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+            <div class="absolute right-0 bottom-20 w-[600px] h-[600px] bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        </div>
+
+        <!-- Utilisation de max-w-site ici aussi -->
+        <section class="max-w-site mx-auto px-4 py-8 relative z-10">
+            <div class="flex flex-col lg:flex-row justify-between">
+
+                <!-- COLONNE GAUCHE : Articles (~66%) -->
+                <div class="w-full lg:w-[66%] pr-4">
+
+                    <h2 class="text-[40px] font-bold text-[#444] mb-8 leading-tight">Blog</h2>
+
+                    <!-- ARTICLE 1 : Femme voiture rouge -->
+                    <div class="mb-14">
+                        <h3 class="text-[26px] font-bold text-[#555] mb-0.5 leading-tight">Praesent justo dolor, lobortis quis lobortis dignissim</h3>
+                        <div class="text-[#4dc9f6] text-[11px] mb-5">
+                            Wednesday, 07 July 2011 09:54 Posted by Admin
+                        </div>
+
+                        <!-- Bloc HAUT : Image + Texte -->
+                        <div class="flex gap-6 mb-4">
+                            <div class="flex-shrink-0 w-[265px]">
+                                <div class="bg-white p-1 border border-gray-200 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1520182175968-3561a357f88e?q=80&w=600&auto=format&fit=crop" alt="Woman in red car" class="w-full h-auto block">
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="text-gray-500 text-[13px] leading-[1.6] text-justify">
+                                    Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis pretium ipsum, et commodo tortor molestiest. Cras interdum nisi non elitrosticl rhoncus ut posuere lectus fermentum. Peltesquel habitan
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bloc BAS : Texte pleine largeur -->
+                        <div class="w-full">
+                            <p class="text-gray-500 text-[13px] leading-[1.6] text-justify mb-4">
+                                Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis pretium ipsum, et commodo tortor molestiest. Cras interdum nisi non elitrosticl rhoncus ut posuere lectus fermentum. Peltesquel habitan morbi tristique senectus et netusisem is a life etsuada fames ac turpis egestas. Phselluses veels nunc tortor, nec placerat quam.
+                            </p>
+                            <a href="#" class="inline-block bg-[#4dc9f6] hover:bg-[#2db3e6] text-white font-medium py-1.5 px-5 rounded-full shadow-md text-[13px] transition-colors mt-1">
+                                Read More
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <button>Read more </button>
-            <div class="container">
-                <div class="Recent Posts">
-                    <h1>Recent Posts</h1>
-                    <div class="card">
-                        <h1>Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor
-                            adipscing tellus quam et lectus.</h1>
-                        <p>Nulla lacinia cursustreic porttitor arec. Etiam consect etur dictum turpis quis dignissimsi.
-                            Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus</p>
-                        <p>Vestibulum mattis are mauris eros varius odio, porttitor adipscing tellus quam et lectus.
-                        <p>Etiam consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius
-                            suscipit eu ultrcies nibh. Vivamus mollis pretium ipsum, et commodo tortor molestiest. Cras
-                            interdum nisi non elitrosticl.</p>
+
+                    <!-- ARTICLE 2 : Homme costume -->
+                    <div class="mb-12">
+                        <h3 class="text-[26px] font-bold text-[#555] mb-0.5 leading-tight">Lorem ipsum dolor sit amet, consectetuer adipiscing</h3>
+                        <div class="text-[#4dc9f6] text-[11px] mb-5">
+                            Wednesday, 07 July 2011 09:54 Posted by Admin
+                        </div>
+
+                        <div class="flex gap-6 mb-4">
+                            <div class="flex-shrink-0 w-[265px]">
+                                <div class="bg-white p-1 border border-gray-200 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Man in suit" class="w-full h-auto block grayscale hover:grayscale-0 transition duration-300">
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <p class="text-gray-500 text-[13px] leading-[1.6] text-justify">
+                                    Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis pretium ipsum, et commodo tortor molestiest. Cras interdum nisi non elitrosticl rhoncus ut posuere lectus fermentum. Peltesquel habitan
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <p class="text-gray-500 text-[13px] leading-[1.6] text-justify mb-5">
+                                Nullam pharetra, dolor eget vestibulum mattis are mauris eros varius odio, porttitor adipiscing tellus quam et lectus. Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis pretium ipsum, et commodo tortor molestiest. Cras interdum nisi non elitrosticl rhoncus ut posuere lectus fermentum. Peltesquel habitan.
+                            </p>
+                            <a href="#" class="inline-block bg-[#4dc9f6] hover:bg-[#2db3e6] text-white font-medium py-1.5 px-5 rounded-full shadow-md text-[13px] transition-colors mt-1">
+                                Read More
+                            </a>
+                        </div>
                     </div>
+
                 </div>
+
+                <!-- COLONNE DROITE : Sidebar (~30%) -->
+                <div class="w-full lg:w-[30%] lg:pl-6 pt-1">
+
+                    <!-- Categories -->
+                    <div class="mb-12">
+                        <h2 class="text-[40px] font-bold text-[#444] mb-8 leading-tight">Categories</h2>
+                        <ul class="space-y-2.5">
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Vestibulum ante ipsum primis</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- In faucibus orci luctus et</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Ultrices posuere cubilia Curae</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Suspendisse sollicitudin velit sed leo</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Ut pharetra augue nec augue</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Nam elit agna,endrerit sit amet</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Tincidunt ac, viverra sed, nulla</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Donec porta diam eu massa</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Quisque diam lorem</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Interdum vitae,dapibus ac</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Scelerisque vitae, pede</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Donec eget tellus non erat</a></li>
+                            <li><a href="#" class="text-[#4dc9f6] text-[13px] hover:underline">- Lacinia fermentum</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div>
+                        <h2 class="text-[40px] font-bold text-[#444] mb-8 leading-tight">Recent Posts</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-gray-700 font-bold text-[13px] mb-1 leading-snug">Nullam pharetra, dolor eget vestibulum mattis</h4>
+                                <p class="text-gray-500 text-[13px] leading-relaxed">are mauris eros varius odio, porttitor adipiscing tellus quam et lectus.</p>
+                            </div>
+                            
+                            <div>
+                                <p class="text-gray-500 text-[13px] leading-relaxed">Nulla lacinia cursustreic porttitor arec. Etiam consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh. Vivamus mollis pretium ipsum.</p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-gray-700 font-bold text-[13px] mb-1 leading-snug">Vestibulum mattis are mauris eros varius odio,</h4>
+                                <p class="text-gray-500 text-[13px] leading-relaxed">porttitor adipiscing tellus quam et lectus. Etiam consectetur dictum turpis quis dignissimsi. Etiam nec turpis id odrfonio varius suscipit eu ultrcies nibh.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </section>
     </main>
-    <footer>
-        <section>
-            <div class="container">
-                <div class="card">
-                    <h2>About Us</h2>
-                    <ul>
-                        <li><a href="">Agency Info</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Dating</a></li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h2>Advice</h2>
-                    <ul>
-                        <li><a href="">FAQs</a></li>
-                        <li><a href="">Account</a></li>
-                        <li><a href="">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h2>Join In</h2>
-                    <ul>
-                        <li><a href="">Sign Up</a></li>
-                        <li><a href="">Forums</a></li>
-                        <li><a href="">Promotions</a></li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h2>Follow Us</h2>
-                    <ul>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        <li><a href=""><img src="" alt=""></a></li>
 
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full mt-16">
+        <!-- CORRECTION : Utilisation de max-w-site (980px) au lieu de max-w-6xl (1152px) -->
+        <div class="max-w-site mx-auto px-4 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">About Us</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Agency Info</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Services</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Dating</a></li>
                     </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Advice</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">FAQs</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Account</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Contacts</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Join In</h4>
+                    <ul class="text-sm text-gray-500">
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Sign Up</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Forums</a></li>
+                        <li class="border-b border-gray-200 py-2"><a href="#" class="hover:text-[#4dc9f6]">Promotions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#4dc9f6] text-xl font-medium mb-4">Follow Us</h4>
+                    <div class="flex gap-2">
+                        <a href="#" class="w-8 h-8 rounded bg-gradient-to-b from-orange-400 to-orange-500 shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" /></svg>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded bg-gradient-to-b from-gray-700 to-gray-800 shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M7 14.8c-2.3 0-3.3-1.6-3.3-2.8 0-1.6 1.2-2.8 3.3-2.8 1.1 0 1.9.4 2.3.8L10.5 8c-.8-.7-1.8-1.2-3.4-1.2-2.7 0-4.8 2.2-4.8 4.9s2.1 4.9 4.8 4.9c2.8 0 4.6-2 4.6-4.6v-.5H7v2.5zm10.5-3.5h-2v2h2v2h2v-2h2v-2h-2v-2h-2v2z" /></svg>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded bg-gradient-to-b from-[#4c66a4] to-[#3b5998] shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" /></svg>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded bg-gradient-to-b from-[#33ccff] to-[#00aced] shadow-sm flex items-center justify-center text-white hover:opacity-90 transition">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <p>Dating © 2012 Privacy Policy</p>
-        </section>
+        </div>
+        
+        <!-- CORRECTION : Utilisation de max-w-site (980px) ici aussi pour la barre de copyright -->
+        <div class="w-full bg-[#4dc9f6] py-3">
+            <div class="max-w-site mx-auto px-4">
+                <p class="text-white text-xs">Dating &copy; 2012 <a href="#" class="hover:underline">Privacy Policy</a></p>
+            </div>
+        </div>
     </footer>
 </body>
-
 </html>
